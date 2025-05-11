@@ -347,7 +347,7 @@ background-color: #091930;
 /** banner section **/
 
 .full_bg {
-     background: url(../images/couple12.jpg);
+     background: url(../images/fot.jpg);
       height: 100%;
      background-size:contain;
      background-position: center;
@@ -1063,7 +1063,10 @@ background:#021626db;
   .modal-dialog {
     margin: 1rem;
   }
-
+ .full_bg {
+     background: url(../images/fot.jpg);
+      height: 100%;
+ }
   .modal-body .form-control {
     font-size: 0.9rem;
   }
