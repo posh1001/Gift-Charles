@@ -1119,6 +1119,44 @@ background:#021626db;
      top: 2px;
   }
 
+  #iv {
+     padding: 15px;
+     width: 100%;
+  }
+
+    #vav {
+          position: relative;
+         top: 3px;
+     }
+
+}
+
+@media (max-width: 875px) {
+
+     #vav {
+          position: relative;
+          bottom: 70px;
+     }
+
+     .contact {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+     }
+    #iv {
+     padding: 15px;
+     display: flex;
+     align-items: center;
+     justify-content: center;
+  }
+
+  .mapimg {
+     padding: 15px;
+     display: flex;
+     align-items: center;
+     justify-content: center;
+  }
 }
 
  .modal-overlay {
