@@ -1109,9 +1109,20 @@ background:#021626db;
   }
 
   #second-header {
-     display: inline-block; 
+     display: flex;
+     justify-content: space-between;
      position: relative; 
      bottom: 68px;
+  }
+
+  .navigation {
+     position: relative;
+     top: 15px;
+  }
+
+  #reg {
+     position: relative;
+     bottom: 20px;
   }
 
   #nav-btn {
@@ -1131,7 +1142,7 @@ background:#021626db;
 
 }
 
-@media (max-width: 875px) {
+@media (min-width: 575px) {
 
      #vav {
           position: relative;
@@ -1157,6 +1168,70 @@ background:#021626db;
      align-items: center;
      justify-content: center;
   }
+
+   #second-header {
+     display: flex;
+     justify-content: space-between;
+     position: relative; 
+     bottom: 68px;
+  }
+
+  .navigation {
+     position: relative;
+     top: 15px;
+  }
+
+  #reg {
+     position: relative;
+     top: 20px;
+  }
+
+}
+
+@media (min-width: 780px) {
+
+     #vav {
+          position: relative;
+          bottom: 70px;
+     }
+
+     .contact {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+     }
+    #iv {
+     padding: 15px;
+     display: flex;
+     align-items: center;
+     justify-content: center;
+  }
+
+  .mapimg {
+     padding: 15px;
+     display: flex;
+     align-items: center;
+     justify-content: center;
+  }
+
+   #second-header {
+     display: flex;
+     justify-content: space-between;
+     position: relative; 
+     bottom: 68px;
+  }
+
+  .navigation {
+     position: relative;
+     top: 15px;
+  }
+
+  #reg {
+     position: relative;
+     top: 60px;
+  }
+
 }
 
  .modal-overlay {
