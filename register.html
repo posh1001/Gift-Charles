@@ -117,7 +117,9 @@
       
       </div>
       <div class="col-lg-3 col-md-3">
-         <img src="images/iv-vid.jpg" style="border-radius: 10px; width: 400px;"/>
+         <video width="300px" autoplay muted>
+         <source src="images/iv-video.mp4" type="video/mp4">
+         </video>
       </div>
             </div>
          </div>
@@ -172,7 +174,7 @@ document.getElementById('form')
 
    btn.value = 'Sending...';
 
-   const serviceID = 'service_4twixyd';
+   const serviceID = 'service_egkcsk9';
    const templateID = 'template_laxw43z';
 
    emailjs.sendForm(serviceID, templateID, this)
