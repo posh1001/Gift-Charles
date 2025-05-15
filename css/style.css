@@ -268,7 +268,6 @@ background-color: #091930;
      padding: 34px 30px;
      position: absolute;
      z-index: 888;
-
      
 }
 
@@ -350,11 +349,11 @@ background-color: #091930;
 /** banner section **/
 
 .full_bg {
-     background: rgba(128, 0, 128, 0.466);
+     background: url(../images/fot.jpg);
      background-size:cover;
      background-position: center;
      background-repeat: no-repeat;
-     height: 100vh;
+     height: 100%;
 }
 
 
@@ -1131,8 +1130,10 @@ background:#021626db;
   }
 
   #iv {
-     padding: 15px;
+     padding: 20px;
      width: 100%;
+     position: relative;
+     left: 10px
   }
 
     #vav {
@@ -1156,10 +1157,9 @@ background:#021626db;
         flex-direction: column;
      }
     #iv {
-     padding: 15px;
-     display: flex;
-     align-items: center;
-     justify-content: center;
+     padding: 25px;
+     position: relative;
+     left: 10px
   }
 
   .mapimg {
@@ -1202,10 +1202,9 @@ background:#021626db;
         flex-direction: column;
      }
     #iv {
-     padding: 15px;
-     display: flex;
-     align-items: center;
-     justify-content: center;
+     padding: 25px;
+     position: relative;
+     left: 15px
   }
 
   .mapimg {
@@ -1283,5 +1282,20 @@ background:#021626db;
       font-size: 18px;
       color: #888;
     }
+
+    body {
+  background-color: #fefcfb;
+  color: #333;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+h1, h2 {
+  font-family: 'Georgia', serif;
+}
+
+img:hover {
+  transform: scale(1.03);
+  transition: transform 0.3s ease;
+}
 
 
