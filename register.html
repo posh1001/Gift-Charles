@@ -169,35 +169,27 @@
          }
       </script>
 
-       <script>
-         const btn = document.getElementById('button');
+       <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+<script>
+  emailjs.init('sMUtsZydVRtS0tOtX');
 
-document.getElementById('form')
- .addEventListener('submit', function(event) {
-   event.preventDefault();
+  const form = document.getElementById('form');
+  const btn = document.getElementById('button');
 
-   btn.value = 'Sending...';
+  form.addEventListener('submit', function (e) {
+    e.preventDefault();
+    button.value = 'Sending...';
 
-   const serviceID = 'service_egkcsk9';
-   const templateID = 'template_laxw43z';
-
-   emailjs.sendForm(serviceID, templateID, this)
-    .then(() => {
-      btn.value = 'Send Email';
-      alert('Sent!');
-      form.reset();
-    }, (err) => {
-      btn.value = 'Send Email';
-      alert(JSON.stringify(err));
-    });
-});
-       </script>
-    <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
-<script type="text/javascript"
-  src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
-
-<script type="text/javascript">
-  emailjs.init('sMUtsZydVRtS0tOtX')
+    emailjs.sendForm('service_egkcsk9', 'template_laxw43z ', this)
+      .then(() => {
+        btn.value = 'Send Email';
+        alert('Sent!');
+        form.reset();
+      }, (err) => {
+        button.value = 'Send Email';
+        alert('Failed to send:\n' + JSON.stringify(err));
+      });
+  });
 </script>
 
    </body>
