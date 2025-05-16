@@ -26,9 +26,12 @@
       <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css">
       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.css" media="screen">
       <link rel="stylesheet" href="https://rawgit.com/LeshikJanz/libraries/master/Bootstrap/baguetteBox.min.css">
-      <!--[if lt IE 9]>
-      <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
-      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script><![endif]-->
+    <script type="text/javascript"
+  src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+
+<script type="text/javascript">
+  emailjs.init('sMUtsZydVRtS0tOtX')
+</script>
    </head>
    <!-- body -->
    <body class="main-layout inner_page">
@@ -169,28 +172,47 @@
          }
       </script>
 
-       <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
-<script>
-  emailjs.init('sMUtsZydVRtS0tOtX');
+    <script>
+       const btn = document.getElementById('button');
 
-  const form = document.getElementById('form');
-  const btn = document.getElementById('button');
+document.getElementById('form')
+ .addEventListener('submit', function(event) {
+   event.preventDefault();
 
-  form.addEventListener('submit', function (e) {
-    e.preventDefault();
-    button.value = 'Sending...';
+   btn.value = 'Sending...';
 
-    emailjs.sendForm('service_egkcsk9', 'template_laxw43z ', this)
-      .then(() => {
-        btn.value = 'Send Email';
-        alert('Sent!');
-        form.reset();
-      }, (err) => {
-        button.value = 'Send Email';
-        alert('Failed to send:\n' + JSON.stringify(err));
-      });
-  });
-</script>
+   const serviceID = 'default_service';
+   const templateID = 'template_laxw43z';
+
+   emailjs.sendForm(serviceID, templateID, this)
+    .then(() => {
+      btn.value = 'Send Email';
+      alert('Sent!');
+    }, (err) => {
+      btn.value = 'Send Email';
+      alert(JSON.stringify(err));
+    });
+});const btn = document.getElementById('button');
+
+document.getElementById('form')
+ .addEventListener('submit', function(event) {
+   event.preventDefault();
+
+   btn.value = 'Sending...';
+
+   const serviceID = 'default_service';
+   const templateID = 'template_laxw43z';
+
+   emailjs.sendForm(serviceID, templateID, this)
+    .then(() => {
+      btn.value = 'Send Email';
+      alert('Sent!');
+    }, (err) => {
+      btn.value = 'Send Email';
+      alert(JSON.stringify(err));
+    });
+});
+    </script>
 
    </body>
 </html>
