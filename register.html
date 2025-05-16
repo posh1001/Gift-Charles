@@ -189,6 +189,7 @@ document.getElementById('form')
     .then(() => {
       btn.value = 'Send Email';
       alert('Sent!');
+       form.reset();
     }, (err) => {
       btn.value = 'Send Email';
       alert(JSON.stringify(err));
